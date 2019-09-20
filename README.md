@@ -1,5 +1,5 @@
 # Smart_Box_API_php
-this is a simple api to check the state of a box and to add a package(colis) to the box
+this is a simple api to check the state of a box and to add a package(colis) to the box.. so
 to check the state of a box using the idCaser and idBox 
 user a GET request with this link: http://localhost/smart_box_api_php/api/box/idCasier/idBox
 and it will give you all the information about the box in JSON format
