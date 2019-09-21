@@ -22,4 +22,17 @@ if ($method == 'GET') {
     } else {
         echo json_encode(['message' => 'Please pill in all the credentials', 'success' => false]);
     }
+
+}
+elseif ($method == 'DELETE') {
+    parse_str(file_get_contents("php://input"),$post_vars);
+    $idColis= $post_vars['idColis'];
+    $data = DB::query("SELECT `idCasier`,`idBox` FROM $tableName WHERE idColis=:idColis", array(':idColis' => $idColis));
+    $idCasier = $data[0]['idCasier'];
+    $idBox = $data[0]['idBox'];
+     echo "the id casier est :  ".$idCasier."et id box est: ".$idBox;
+    DB::query("DELETE FROM $tableName WHERE idColis=:idColis", array(':idColis' => $idColis));
+    echo json_encode(['message' => 'Post Deleted successfully', 'success' => true]);
+    DB::query("UPDATE `box` SET `etat` = 'inactif'  WHERE idBox=:idBox and idCasier=:idCasier", array(':idBox' => $idBox, ':idCasier' => $idCasier));
+
 }
