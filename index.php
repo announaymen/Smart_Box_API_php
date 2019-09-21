@@ -14,8 +14,8 @@ $numcasier = null;
 $numBox=null;
 $tableName = (string) $url[3];      // exemple http://localhost/Smart_Box_API_php/api/box/132/21  ==> tableName=url[3]==box
 if (($url[4] != null)&&($url[5] != null)) {
-    $numcasier = (int) $url[4]; // exemple http://localhost/Smart_Box_API_php/api/box/132/21  ==> numcasier=url[4]==box
-    $numBox=(int)$url[5];       //exemple http://localhost/Smart_Box_API_php/api/box/132/21  ==> numBox=url[5]==box
+    $numcasier = (int) $url[4]; // exemple http://localhost/Smart_Box_API_php/api/box/132/21  ==> numcasier=url[4]==132
+    $numBox=(int)$url[5];       //exemple http://localhost/Smart_Box_API_php/api/box/132/21  ==> numBox=url[5]==21
 }
 if (in_array($tableName, $tables)) //if the table name exist in our database
 {
