@@ -10,7 +10,6 @@ function OpenCon()
 
     return $conn;
 }
-
 function CloseCon($conn)
 {
     $conn->close();
