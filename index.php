@@ -13,7 +13,7 @@ $url = explode('/', $url); // convert the URL to an array
 $numcasier = null;
 $numBox=null;
 $tableName = (string) $url[3];      // exemple http://localhost/Smart_Box_API_php/api/box/132/21  ==> tableName=url[3]==box
-if (($url[4] != null)&&($url[5] != null)) {
+if (($url[4])&&($url[5])) {
     $numcasier = (int) $url[4]; // exemple http://localhost/Smart_Box_API_php/api/box/132/21  ==> numcasier=url[4]==box
     $numBox=(int)$url[5];       //exemple http://localhost/Smart_Box_API_php/api/box/132/21  ==> numBox=url[5]==box
 }
