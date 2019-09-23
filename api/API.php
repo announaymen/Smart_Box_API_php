@@ -44,7 +44,6 @@ if ($method == 'GET') // check the box state
     $idCasier = $data['idCasier'];
     if ($idBox && $idCasier) {
         supprimer_colis_box($idBox, $idCasier);
-        // DB::query("DELETE FROM $tableName WHERE idColis=:idColis", array(':idColis' => $idColis));
         include_once 'modeles/classe_box.php';
         modifier_etatBox_IDBOX($idBox, $idCasier, 'vide');
     }
