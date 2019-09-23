@@ -4,7 +4,7 @@ include_once 'connection.php';
 
 //constructeur????????????????
 
-//****************************************************************************************//
+//*****************************************************************************************//
 //affecter un box à un colis
 function inserer_box_colis($idActeur, $idBox, $idCasier, $idColis, $dateOperation, $typeOperation)
 {

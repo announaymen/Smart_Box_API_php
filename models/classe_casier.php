@@ -4,7 +4,7 @@ include_once 'connection.php';
 
 //constructeur
 
-//****************************************************************************************//
+//*****************************************************************************************//
 //inserer un casier
 function inserer_casier($idCasier,$code_Commune,$adr){
 		
