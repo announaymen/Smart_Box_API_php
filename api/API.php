@@ -36,7 +36,7 @@ if ($method == 'GET') // check the box state
     }
 } elseif ($method == 'DELETE') //retrieve the colis from the box
 {
-    parse_str(file_get_contents("php://input"), $post_vars);
+    parse_str(file_get_contents("php://input"), $post_vars);//get the body of the DELETE request
     $idColis = $post_vars['idColis'];
     include_once 'modeles/classe_box_contient_colis.php';
     $data = rechercher_box_colis($idColis);
