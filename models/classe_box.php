@@ -3,7 +3,7 @@
 include_once 'connection.php';
 
 //constructeur
-//****************************************************************************************//
+//******************************************************************************************//
 //inserer un box
 function inserer_box($idBox, $idCasier, $etatBox, $longueurBox, $largeurBox, $hauteurBox)
 {
