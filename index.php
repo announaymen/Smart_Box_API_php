@@ -11,7 +11,6 @@ $tables = ['box', 'box_contient_colis', 'casier']; // the tables of our database
 $url = rtrim($request_uri, '/');
 $url = filter_var($request_uri, FILTER_SANITIZE_URL);
 $url = explode('/', $url); // convert the URL to an array
-// print_r($url);
 $idCasier = 0;
 $idBox = 0;
 $tableName = (string)$url[3];      // exemple http://localhost/Smart_Box_API_php/api/box/132/21  ==> tableName=url[3]==box
